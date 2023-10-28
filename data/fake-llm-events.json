@@ -1,0 +1,201 @@
+[
+    {
+        "name" : "default",
+        "description" : "Find the square root of a number",
+        "run" : [
+            {
+                "type": "token",
+                "category": "text",
+                "runId": "dummy_run_0",
+                "content": {
+                    "text": "(Dummy) I need to find out the value of foo\nAction: FOO\nAction Input: empty string "
+                }
+            },
+            {
+                "type": "toolStart",
+                "name": "tool1",
+                "category": "tool",
+                "runId": "dummy_run_1",
+                "content": {
+                    "input": "What is the square root of 4?"
+                }
+            },
+            {
+                "type": "toolEnd",
+                "name": "tool1",
+                "category": "tool",
+                "runId": "dummy_run_1",
+                "content": {
+                    "output": "The square root of 4 is 2."
+                }
+            },
+            {
+                "type": "token",
+                "category": "text",
+                "runId": "dummy_run_2",
+                "content": {
+                    "text": "I now know the final answer\nFinal Answer: baz"
+                }
+            }
+        ]
+    },
+    {
+        "name" : "squareRoot",
+        "description" : "Find the square root of a number",
+        "run" : [
+            {
+                "type": "token",
+                "category": "text",
+                "runId": "dummy_run_0",
+                "content": {
+                    "text": "(Dummy) I need to find out the value of foo\nAction: FOO\nAction Input: empty string "
+                }
+            },
+            {
+                "type": "toolStart",
+                "name": "tool1",
+                "category": "tool",
+                "runId": "dummy_run_1",
+                "content": {
+                    "input": "What is the square root of 4?"
+                }
+            },
+            {
+                "type": "toolEnd",
+                "name": "tool1",
+                "category": "tool",
+                "runId": "dummy_run_1",
+                "content": {
+                    "output": "The square root of 4 is 2."
+                }
+            },
+            {
+                "type": "token",
+                "category": "text",
+                "runId": "dummy_run_2",
+                "content": {
+                    "text": "I now know the final answer\nFinal Answer: baz"
+                }
+            }
+        ]
+    },
+    {
+        "name" : "apartmentSearch",
+        "description" : "Find affordable apartments in Seattle",
+        "run" : [
+            {
+                "type": "token",
+                "category": "text",
+                "runId": "dummy_run_0",
+                "content": {
+                    "text": "I need to find a website or resource that lists apartments in Seattle and their prices."
+                }
+            },
+            {
+                "type": "token",
+                "category": "action",
+                "runId": "dummy_run_1",
+                "content": {
+                    "toolInput": "cheapest apartments in Seattle"
+                }
+            },
+            {
+                "type": "toolStart",
+                "name": "braveSearch",
+                "category": "tool",
+                "runId": "dummy_run_1",
+                "content": {
+                    "input": "cheapest apartments in Seattle"
+                }
+            },
+            {
+                "type": "token",
+                "category": "text",
+                "runId": "dummy_run_2",
+                "content": {
+                    "text": "I have found several websites that list cheap apartments in Seattle. I will provide you with a JSON array of the results."
+                }
+            },
+            {
+                "type": "token",
+                "category": "action",
+                "runId": "dummy_run_3",
+                "content": {
+                    "tool": "webBrowser",
+                    "toolInput": "https://www.apartments.com/seattle-wa/under-800/"
+                }
+            },
+            {
+                "type": "toolStart",
+                "name": "webBrowser",
+                "category": "tool",
+                "runId": "dummy_run_4",
+                "content": {
+                    "input": "https://www.apartments.com/seattle-wa/under-800/"
+                }
+            },
+            {
+                "type": "toolEnd",
+                "name": "webBrowser",
+                "category": "tool",
+                "runId": "dummy_run_4",
+                "content": {
+                    "output": "The text is a menu of various options related to renting apartments and homes in different cities in Washington state..."
+                }
+            },
+            {
+                "type": "token",
+                "category": "action",
+                "runId": "dummy_run_5",
+                "content": {
+                    "tool": "webBrowser",
+                    "toolInput": "https://www.rentcafe.com/cheap-apartments-for-rent/us/wa/seattle/"
+                }
+            },
+            {
+                "type": "toolEnd",
+                "name": "webBrowser",
+                "category": "tool",
+                "runId": "dummy_run_6",
+                "content": {
+                    "output": "I encountered an error while trying to access the website. I will try a different website."
+                }
+            },
+            {
+                "type": "token",
+                "category": "action",
+                "runId": "dummy_run_7",
+                "content": {
+                    "tool": "webBrowser",
+                    "toolInput": "https://hotpads.com/seattle-wa/affordable-apartments-for-rent"
+                }
+            },
+            {
+                "type": "toolStart",
+                "name": "webBrowser",
+                "category": "tool",
+                "runId": "dummy_run_10",
+                "content": {
+                    "input": "https://hotpads.com/seattle-wa/affordable-apartments-for-rent"
+                }
+            },
+            {
+                "type": "toolEnd",
+                "name": "webBrowser",
+                "category": "tool",
+                "runId": "dummy_run_10",
+                "content": {
+                    "output": "The text is a webpage for HotPads, a platform for finding affordable apartments for rent in Seattle, WA..."
+                }
+            },
+            {
+                "type": "token",
+                "category": "text",
+                "runId": "dummy_run_12",
+                "content": {
+                    "text": "I have found a website called HotPads that lists affordable apartments for rent in Seattle. I will provide you with a JSON array of the results."
+                }
+            }
+        ]
+    }
+]

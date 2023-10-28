@@ -1,0 +1,26 @@
+[
+    {
+        "id": "428eb69b-3ec1-48ec-bab5-01a5274e6d48",
+        "type": "tool",
+        "content": [
+            {
+                "type": "toolStart",
+                "name": "webBrowser",
+                "category": "tool",
+                "runId": "428eb69b-3ec1-48ec-bab5-01a5274e6d48",
+                "content": {
+                    "input": "\"https://www.apartments.com/amli-mark24-seattle-wa/twk16f9/\",\"What are the units listed, and what are their prices?\""
+                }
+            },
+            {
+                "type": "toolEnd",
+                "name": "webBrowser",
+                "category": "tool",
+                "runId": "428eb69b-3ec1-48ec-bab5-01a5274e6d48",
+                "content": {
+                    "output": "Units listed in the above text:\n1. Unit 1-761\n2. Unit 1-761 A2e\n3. Unit 1-635\n4. Unit 1-757\n5. Unit 1-505\n6. Unit 1-265\n7. Unit 1-265 A2c\n8. Unit 1-665b\n9. Unit 1-766\n10. Unit 1-766 A2a\n11. Unit 1-358\n12. Unit 1-328\n13. Unit 1-558\n14. Unit 1-558 A2b\n15. Unit 1-769\n16. Unit 1-769 A3f\n17. Unit 1-360\n18. Unit 1-360 A4a\n\nRelevant Links:\n1. [Floor Plan View A2e](URL)\n2. [Floor Plan View A2d](URL)\n3. [Floor Plan View A2c](URL)\n4. [Floor Plan View C3c](URL)\n5. [Floor Plan View C4b](URL)"
+                }
+            }
+        ]
+    }
+]
